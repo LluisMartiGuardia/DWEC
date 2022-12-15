@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DWEC - UD01 - Modificar el contingut del codi html</title>
+        <!--<script src="JS/funciones.js"></script>-->
+    </head>
+    <body>
+        <h1>Modificando el codigo HTML</h1>
+        <p id="prueba">Modificando el contenido</p>
+
+        <!--<button type="button" onclick="document.getElementById('prueba').innerHTML = 'CAMBIANDO EL CONTENIDO!'">CAMBIAR</button>-->
+
+        <h1>Modificar Dimagenes</h1>
+        <img  id="miImagen" src="images/img1.png" onclick="cambiaImagen();" width="100" height="100">
+
+        <p>Haz clic sobre las imagenes para cambiarlas</p>
+
+        <script>
+            function cambiaImagen()
+            {
+                let imagen = document.getElementById('miImagen');
+
+                if(imagen.src.match('img1'))
+                {
+                    imagen.src = "./images/img2.png"
+                }
+                else
+                {
+                    imagen.src = "./images/img1.png"
+                }
+            }
+        </script>
+        <noscript>
+            <p>POR FAVOR, PERMITE JAVASCRIPT</p>
+        </noscript>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DWEC - UD01 - Modificar el contingut del codi html</title>
+        <!--<script src="JS/funciones.js"></script>-->
+    </head>
+    <body>
+        <h1>Modificando el codigo HTML</h1>
+        <p id="prueba">Modificando el contenido</p>
+
+        <!-- <button type="button" onclick="document.getElementById('prueba').innerHTML = 'CAMBIANDO EL CONTENIDO!'">CAMBIAR</button> -->
+
+        <h1>Modificar CSS</h1>
+
+        <p id="miTexto">Cualquier texto hola</p>
+
+        <!--Las funciones llevan () al final-->
+        <button id="boton" type="button" onclick="miEstilo()">
+            PULSA AQUI
+        </button>
+
+        <script>
+            function miEstilo()
+            {
+                // <!--Que mi texto apunte al elemento mi texot de la pagina-->
+                let miTexto = document.getElementById("miTexto"); 
+                miTexto.style.fontSize = "250px";
+
+                // miTexto.style.color = "white";
+
+                console.log('hola caracola');
+
+                if(miTexto.textContent.match("hola"))
+                {
+                    console.log('dsadsadsa')
+                    miTexto.style.color = "red";
+                }
+                else
+                {
+                    miTexto.style.color = "white";
+                }
+                
+                document.getElementById('boton').innerHTML = 'cambiar';
+
+                // document.write("<h2>TEXTO NUEVO</h2>")
+
+                window.alert("boquepasa");
+            }
+        </script>
+
+        <noscript>
+            <p>POR FAVOR, PERMITE JAVASCRIPT</p>
+        </noscript>
+    </body>
+</html>

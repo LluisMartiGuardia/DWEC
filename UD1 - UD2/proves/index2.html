@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+
+
+
+        <!-- <button id="miBoton" onclick="this.innerHTML=Date()">Pulsa el boton para saber la hora</button> -->
+        
+        <p id=" miTexto">Texto a modificar</p>
+
+        <button id="miBoton">Pulsa aqui</button>
+        
+        <!--src="./JS/funciones.js"-->
+        <script>
+            function dale()
+            {
+                var x = document.getElementById("miTexto");
+                x.innerHTML = "hola";
+            }
+            
+            //Captura el boton y le añade el evento click
+            document.getElementById("miBoton").addEventListener("click", dale, false);
+
+
+            //\n --> Salto de linea
+            //\t --> Tabular codigo
+
+            console.log("Hola\n que tal\t estas");
+
+
+            let numero = 123;
+            
+            // alert(typeof(numero));
+            
+            //Convertir numero a cadena
+            let cadena   = numero.toString();
+
+            //Convertir numero a cadena directamente
+            let convertirNumeroDirectamente   = (1241).toString();
+
+            // alert(typeof(cadena));
+
+
+            //DECIMALES
+            //TypeOf --> Mostra el tipus de variable
+            //ToPrecision --> Quina precisió vols del nombre. Redondeja el nombre indicat.
+            //ToFixed --> le indicamos cuantos decimales queremos que muestre. Si le indicamos 0, redondea el numero.
+            var num = 9.99;
+
+            num.toFixed(6);
+
+            console.log(num.toPrecision(10));
+
+            //TRUE == 1
+            //FALSE == 0
+            let numero2  =Number(true);
+            //alert(numero2);
+            
+        </script>
+        
+
+        <p id="fecha">
+            <script>
+                document.getElementById("fecha").innerHTML = Date();
+
+
+
+                let fecha = new  Date(Date.now());
+                let fecha2 = new Date(240);
+                let fecha3 = new Date(2022, 10, 4, 16, 02, 33, 23);
+                //Date(año, mes, dia, hora, minutos, segundos, milisegundos)
+
+                console.log(fecha.getHours);
+                console.log(fecha);
+                console.log("fecha: "+fecha2);
+                console.log(fecha3);
+
+            </script>
+        </p>
+
+        <!-- ARRAYS -->
+        <!--array.length;
+        array.sort;
+        array.push;  Añadir nuevo elemento
+        array.pop;  Extrat y eliminar el ultimo elemento
+        array.shift;  Eliminar el primer elemento, y lo guarda
+        delete array[posicion];  Eliminar un elemento concreto;-->
+
+        <p id="arrayChispas">
+            <script>
+                let arrDias = ["Lunes", "Martes", 1929, "Miercoles", "Jueves", Date(), "Viernes"];
+                document.getElementById("arrayChispas").innerHTML = arrDias.sort();
+                console.log(arrDias.length);
+                console.log(arrDias);
+                arrDias.push("aff");
+                console.log(arrDias.length);
+                console.log(arrDias);
+                console.log(arrDias.pop());
+                delete arrDias[1];
+                console.log(arrDias);
+
+
+                //ARRAY MULTIDIMENSIONAL
+                //arrayDM[que array mostrar][la posicion del contenido]
+                var dias = [[1,2,3,4,5], ["hola", "adios"]];
+
+
+                //FOR EACH
+                //Espera como parametro una funcion
+                // arrDias.forEach(provaRecorrerArray=>{
+                //     console.log(provaRecorrerArray)
+                // })
+
+
+                function provaRecorrerArray(valor, index, array){
+                    var mnsj = "valor: "+valor;
+                    console.log(mnsj);
+                    //console.log(index);
+                    //console.log(array);
+                }
+
+                //FOR EACH
+                //Espera como parametro una funcion que tiene 3 parametros 
+                arrDias.forEach(provaRecorrerArray);
+            </script>
+        </p>
+    </body>
+</html>

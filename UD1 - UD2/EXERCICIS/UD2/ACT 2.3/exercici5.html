@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICI 5</title>
+</head>
+<body>
+
+
+    <script>
+        //DECLAR LA UNES VARIABLES I 2 ARRAYS QUE CONTINDRAN LA RESPOSTA SEPARADA PER LES LLETRES
+        //I UN ALTRE QUE TINDRA LA RESPOSTA EN "_"
+        var solucio = "pilota";
+
+        let signe="";
+
+        const arrSolucio = [];
+        const arrSignes = [];
+
+        //UN BUCLE PER POSAR ELS "_" DINS L'ARRAY
+        for(i=0;i<=solucio.length-1;i++){
+            
+            signe+=" _ ";
+
+            arrSolucio.push(solucio.charAt(i));
+
+            arrSignes.push("_");
+    
+           
+        }
+
+        //
+        console.log("array: "+arrSolucio);
+        console.log("array signes: "+arrSignes);
+
+        //UNES QUANTES VARIABLES MÉS
+        var cosa = alert("La paraula: " + signe);
+
+
+        var resposta;
+        
+       var i;
+
+        var paraulesIncorrectes = "";
+
+        var intents = solucio.length;
+
+
+
+        //NO FUNCIONA CORRECTAMENT. SI POSES LA PRIMERA LLETRA SI QUE L'AGAFA PERO LES DEMES NO
+        //CREC QUE EL PROBLEMA ESTA EN ELS "BREAK" de "IF" QUE NO DEIXEN INCREMENTAR "I"
+        //NO HE TROBAT UNA MANERA DE SOLUCIONAR-HO
+        
+
+
+
+        //EN AQUEST BUCLE DONEM UNS INTENTS QUE SON IGUALS A LA LONGITUT DE LA PARAULA
+        //DEMANEM LA LLETRA PER PANTALLA
+        //EN EL BUCLE FOR REPETIREM L'ACCIO FINS LA LONGITUT DE LA PARAULA
+        //EN LA CONDICIO IF ELSE ES MIRA SI LA LLETRA QUE ESCRIUS COINCIDEIX AMB ALGUNA LLETRA
+        //DE LA PARAULA CORRECTA. EN CAS AFIRMATIU, LA POSA EN UN ARRAY.
+        //EN CAS NEGATIU LA MOSTRA A LA CONSOLA
+        do{
+            resposta = prompt("La paraula: "+arrSignes+"\nEscriu la lletra: \n\n Et queden "+intents+" intents");
+
+            for(i=0;i<=solucio.length;i++){
+
+                //document.write("arrsolucio: "+arrSolucio[i]);
+               
+                if(resposta.charAt(0) == arrSolucio[i]){
+
+                    alert("CORRECTE!");
+
+                    arrSignes[i] = resposta;
+                    break;
+
+                }else{
+                    alert("INCORRECTE");
+                    paraulesIncorrectes += resposta+", ";
+                    
+                    break;
+                }
+
+
+                i+=1;
+                alert("I: "+i);
+
+            }
+    
+            intents = intents-1;
+
+        }while(intents >0);
+
+        //MOSTREM ELS RESULTATS FINALS
+        console.log("SIGNES AMB LLETRES: "+arrSignes);
+        console.log("PARAULES INCORRECTES: "+paraulesIncorrectes);
+        alert("La paraula correecta era "+solucio);
+
+    </script> 
+
+
+</body>
+</html>

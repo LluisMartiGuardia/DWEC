@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITAT 2</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //DECLAREM LA VARIABLE QUE TINDRA EL NOM I EL COGNOM
+        var resultat;
+
+        //DECLAREM EL NOM I COGNOM CORRECTES
+        var nomCorrecte = "geronimo";
+        var cognomCorrecte = "stilton"
+
+        //SEPAREM LES ENTRADES QUE S'HAN ESCRIT
+        var nomICognomEscrits;
+
+        //DECLAREM LES 2 VARIABLES QUE TINDRAN TANT EL NOM COM EL COGNOM QUE HAS ESCRIT
+        var nomEscrit;
+        var cognomEscrit;
+    
+
+        //UN BUCLE QUE SEGUEIX FINS QUE NO ESCRIUS EL NOM I COGNOM CORRECTAMENT
+        do{
+            //ES DEMANA A L'USUARI QUE ESCRIGUI EL NOM I COGNOM
+            resultat = prompt("Escriu el nom i cognom d'un personatge separat per un espai: ");
+            
+            //SEPAREM TANT EL NOM COM EL COGNOM EN 2 VARIABLES
+            nomICognomEscrits = resultat.split(" ");
+
+            nomEscrit = nomICognomEscrits[0];
+
+            cognomEscrit = nomICognomEscrits[1];
+
+            console.log(nomEscrit);
+            console.log(cognomEscrit);
+
+            //FEIM TOTES LES OPERACIONS QUE S'HAN DEMANAT A L'EXERCICI
+            if(nomCorrecte != nomEscrit && cognomCorrecte != cognomEscrit){
+                alert("ERROR, intenta-ho de nou.");
+            }else if(nomCorrecte == nomEscrit && cognomCorrecte != cognomEscrit){
+                alert("Et falta el cognom");
+            }else if(nomCorrecte != nomEscrit && cognomCorrecte == cognomEscrit){
+                alert("Et falta el nom");
+            }
+
+
+        }while(nomCorrecte != nomEscrit || cognomCorrecte != cognomEscrit);
+
+        //QUANT HA ACABAT EL BUCLE ES MOSTRA EL MISSATGE DE BENGINGURTA
+        alert("BENVINGUT!");
+
+
+
+
+    </script>
+
+
+</body>
+</html>

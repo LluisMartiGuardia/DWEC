@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITAT 3</title>
+</head>
+<body>
+    
+        <!-- Autor: Lluis Marti
+    Nom exercici: Missatge per edat -->
+
+    <script>
+
+
+        //Variable que guarda el valor que escrius
+        let resposta  = prompt("Escriu la edat");
+
+        //If per comprovar si els numeros no passen d'un rang
+        if(resposta<0 || resposta>=200){
+            alert("L'edat que has posat no es valida");
+        }else{
+            //IF ELSE per definir les edats
+            if(!resposta ){
+                alert("No has escrit cap numero");
+            }else if(resposta>=0 && resposta<= 12){
+                alert("Nen");
+            }else if(resposta>=13 && resposta<=26){
+                alert("Jove");
+            }else if(resposta>=26 && resposta<=60){
+                alert("Adult");
+            }else if(resposta>=60){
+                alert("Jubilat");
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>

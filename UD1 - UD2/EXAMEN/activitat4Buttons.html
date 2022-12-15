@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <button id="ceroId" value="0">0</button>
+        <button id="unoId" value="1">1</button>
+        <button id="dosId" value="2">2</button>
+        <button id="tresId" value="3">3</button>
+        <button id="cuatroId" value="4">4</button>
+        <button id="cincoId" value="5">5</button>
+        <button id="seisId" value="6">6</button>
+        <button id="sieteId" value="7">7</button>
+        <button id="ochoId" value="8">8</button>
+        <button id="nueveId" value="9">9</button>
+
+    </div>
+
+    <div>
+
+        <p id="feedback">Introdueix el numero del NIF i cercarem la resposta</p>
+
+    </div>
+
+    <div>
+        <button id="mostrar">Mostrar el NIF amb lletra</button>
+    </div>
+
+
+    <script>
+
+        let numero = "";
+
+        function capturaNumero(){
+            numero += this.value;
+            console.log(numero);
+        }
+
+        //Generar los eventos click para los botones numericos
+        //Tots ells cridaran a la mateixa funcio
+        document.getElementById("ceroId").addEventListener("click", capturaNumero, false);
+        document.getElementById("unoId").addEventListener("click", capturaNumero, false);
+        document.getElementById("dosId").addEventListener("click", capturaNumero, false);
+        document.getElementById("tresId").addEventListener("click", capturaNumero, false);
+        document.getElementById("cuatroId").addEventListener("click", capturaNumero, false);
+        document.getElementById("cincoId").addEventListener("click", capturaNumero, false);
+        document.getElementById("seisId").addEventListener("click", capturaNumero, false);
+        document.getElementById("sieteId").addEventListener("click", capturaNumero, false);
+        document.getElementById("ochoId").addEventListener("click", capturaNumero, false);
+        document.getElementById("nueveId").addEventListener("click", capturaNumero, false);
+
+
+        //Creem l'event click pel boto "mostrar"
+        //Cridara a la funcio nifAmbLletra
+        document.getElementById("mostrar").addEventListener("click", nifAmbLletra, false);
+
+
+        function nifAmbLletra(){
+
+            //Declaracio de variables
+            let nif = "";
+            let resto = "";
+            let lletresJuntes = "TRWAGMYFPDXBNJZSQVHLCKET";
+            let letras = [];
+
+            //BUCLE PER SEPARAR LES LLETRES DINS DE L'ARRAY
+            for(var i=0;i<=lletresJuntes.length;i++){
+                letras.push(lletresJuntes[i]);
+                i+1;
+            }
+            let lletraNif = "";
+
+
+            // capturar l'element HTML per donar feedback a l'usuari
+            feedBack = document.getElementById("feedback");
+
+
+            nif = numero;
+
+
+            //isNaN --> Is not a number
+            if(isNaN(nif) || nif.trim() == ""){
+
+                feedBack.innerHTML = "Introdueixi el valor numeric entr 0 i 99999999";
+
+            }else{
+
+                //passem la cadena a numero
+                nif = parseInt(nif);
+
+                //Si el numero no respecta els limits, mostem un missatge advertint ho.
+                if(nif<0 || nif >99999999){
+                    feedBack.innerHTML = "Introdueixi el valor numeric entr 0 i 99999999";
+                }else{
+
+                    //Calcular el modul de la divisio
+                    nif = nif%23;
+
+                    //Aquest resto ens dona la posicio del array a consultar
+                    lletraNIF = letras[resto];
+
+
+                    feedBack.innerHTML = nif+lletraNIF;
+
+                }
+            }
+
+            numero = "";
+
+        }
+
+
+    </script>
+
+</body>
+</html>

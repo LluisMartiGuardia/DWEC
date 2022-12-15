@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICI 4</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // var numero;
+
+        // //COMPROVEM EL TAMANY DEL NUMERO
+        // do{
+
+        //     numero = prompt("Escriu un numero que estigui entre 0 i 99999999");
+
+        //     if(numero<=0 || numero>=99999999){
+
+        //         alert("Torna a escriure el numero");
+        //     }
+
+        // }while(numero<=0 || numero>=99999999);
+
+
+        // //CALCULEM EL RESTO DE LA DIVISIO
+        // var operacio = numero%23;
+
+
+        // alert(operacio);
+
+        //DECLAREM UNA VARIABLE QUE SON TOTES LES LLETRES JUNTES I UN ARRAY QUE CONTE LES LLETRES SEPARADES
+        // let lletresJuntes = "TRWAGMYFPDXBNJZSQVHLCKET";
+        // let letras = [];
+
+        // //BUCLE PER SEPARAR LES LLETRES DINS DE L'ARRAY
+        // for(var i=0;i<=lletresJuntes.length;i++){
+        //     letras.push(lletresJuntes[i]);
+        //     i+1;
+        // }
+
+
+
+        // var numeroComplert;
+
+        // var llongitut;
+
+        // var zero="0";
+        // //EN TEORIA UN BUCLE QUE INCREMETNA 0
+        // do{
+        //     numeroComplert += zero+numero; 
+        //     zero ="0"+"0";
+
+        //     llongitut = numeroComplert.length;
+        // }
+        // while(llongitut>=8);
+
+
+        // // for(i=0;i<=8;i++){
+        // //     if(numero.length<8){
+        // //         numeroComplert= zero+numero;
+        // //         numeroComplert+zero;
+        // //     }
+        
+        // // }
+
+
+
+
+        // document.write(numeroComplert + letras[operacio]);
+
+        // // var resposta = prompt("Vols tornar a introduir el numero?");
+
+
+        // // if(resposta=="si"){}
+
+
+    </script>
+
+
+    <!--VERSIO JOAN-->
+    <script>
+
+        let nif=""; //Per recollir i guardar el nif
+        let resto = ""; //Per guardar el resto de la divisio
+
+        let lletresJuntes = "TRWAGMYFPDXBNJZSQVHLCKET";
+        let letras = [];
+
+        //BUCLE PER SEPARAR LES LLETRES DINS DE L'ARRAY
+        for(var i=0;i<=lletresJuntes.length;i++){
+            letras.push(lletresJuntes[i]);
+            i+1;
+        }
+
+        //DECLAREM UNA VARIABLE QUE SON TOTES LES LLETRES JUNTES I UN ARRAY QUE CONTE LES LLETRES SEPARADES
+        console.log(letras);
+        let lletraNIF = "";
+        let isRight = false; //Boolea per controlar el bucle while
+
+        while(!isRight){
+            //Anem a pensar que tot soritra be
+            isRight = true;
+
+            //Capturem el numero de nif introduit per l'usuari
+            nif = prompt("Introdueix el teu numero de NIFm sense la lletra ")
+        }
+        //isNaN --> Is not a number
+        if(isNaN(nif)){
+            //Si la cadena introduida no es un numero mostrem un missatge advertint
+            console.log("Introdueixi un numero entre 0 i 99999999");
+
+            //El bucle continua
+            isRight=false;
+        }else{
+            //passem la cadena a numero
+            nif = parseInt(nif);
+
+            //Si el numero no respecta els limits, mostem un missatge advertint ho.
+            if(nif<0 || nif >99999999){
+                console.log("Introdueixi un valor correcte: entre 0 i 99999999");
+                
+                //El bucle continuara
+                isRight=false;
+            }
+        }
+
+
+        //Calcular el modul de la divisio
+        nif = nif%23;
+
+        //Aquest resto ens dona la posicio del array a consultar
+        lletraNIF = letras[resto];
+
+
+        console.log(nif+lletraNIF);
+
+    </script>
+
+
+</body>
+</html>
+
+
+<!-- dividir nunero que te dona per 23;
+
+obtenir el resto que te dona del  -->

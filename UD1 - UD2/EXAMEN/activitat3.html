@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITAT 3</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //CREAM UNA VARIABLE QUE SIGUIN TOTES LES LLETRES DE L'ABECEDARI JUNTES PER PODERLES
+        //sEPARAR DESPRÉS
+        var abecedari = "abcdefghijklmnopqrstuvwxyz";
+
+        
+        //CREAM L'ARRRAY ON ANIRAN TOTES LES LLETRES SEPARADES
+        const arrLletres = [];
+       
+        //BUCLE PER OMPLIR L'ARRAY PER LES LLETRES SEPARADES
+        for(var i=0;i<=abecedari.length;i++){
+            arrLletres.push(abecedari[i]);
+            i+1;
+        }
+
+        console.log(arrLletres);
+
+        //FEIM UN BUCLE PER MOSTRAR LES LLETRES AMB EL SEU NUMERO CORRESPONENT
+        for(var i=0;i<=arrLletres.length-2;i++){
+
+            document.write(i+1+" - "+arrLletres[i]+"<br>");
+            i+1;
+
+        }
+
+        //FEIM UN ALTRE BLUCLE PER MOSTRAR LA POSICIO, A, I LA LLETRA CORRESPONENT
+        for(var i=0;i<=arrLletres.length-2;i++){
+            document.write(27+i+" - "+arrLletres[0]+arrLletres[i]+"<br>");
+        }
+
+    </script>
+
+
+</body>
+</html>

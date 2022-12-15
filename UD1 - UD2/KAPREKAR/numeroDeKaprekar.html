@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAPREKAR</title>
+</head>
+<body>
+    
+    <script>
+
+        var resposta = prompt("Escriu un numero de 4 xifres:");
+
+        const arrContingut = [];
+        
+
+        //Passam l'Int a String
+        var numeroString = resposta.toString();
+
+
+        //Separar els 4 digits del numero dins un array
+
+
+        //Agafam les posicions del numero, i les guardem en una variable
+        //var r = numeroString.charAt(1);
+
+
+
+        var separarNumeros;
+
+
+        //Bucle per separar els digits en un array
+        for(i=0;i<=resposta.length;i++){
+
+
+            separarNumeros = numeroString.charAt(i);
+
+
+            i+1;
+
+
+            arrContingut.push(separarNumeros);
+
+           // document.write(arrContingut[i]+"<br>");
+
+        }
+
+        let numerosOrdenatsDeMenorAMajor;
+
+
+
+        //Bucle per ordenar els numeros de menor a major
+        for(i=0;i<=arrContingut.length;i++){
+
+            arrContingut.join("b");
+
+            numerosOrdenatsDeMenorAMajor = arrContingut.sort();
+
+            // numerosOrdenats+=numerosOrdenats
+
+
+        }
+        
+        arrContingut.shift();
+        arrContingut.join(/,/g);
+        
+
+
+        document.write("Numeros ordenats de menor a major : "+numerosOrdenatsDeMenorAMajor+"<br>");
+        
+
+        
+
+
+        //Ordenar numeros de menor a major
+        const numerosOrdenatsDeMajorAMenor = numerosOrdenatsDeMenorAMajor.reverse();
+        document.write("Numeros ordenats de major a menor : "+numerosOrdenatsDeMajorAMenor);
+
+
+        var v1 = numerosOrdenatsDeMenorAMajor.toString();
+        
+        v1.replace(/,/g, '');
+
+        console.log(v1);
+
+        
+        
+
+        // let operacioRestaNumeros = numerosOrdenatsDeMajorAMenor-numerosOrdenatsDeMenorAMajor;
+
+        // console.log(operacioRestaNumeros);
+
+
+
+
+        //M'HE QUEDAT A LA PART DE LES COMES I NO HE AVANÇAT
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo</title>
+</head>
+<body>
+    <div id="caja">
+        <script>
+            let caja = document.getElementById("caja");
+    
+            let limit = 4;
+    
+            // PARTE CRECIENTE
+            for(i=0; i <limit; i++){
+                let asterisco = "";
+                let espacioHTML = "";
+    
+                for(k = 0; k < limit - i - 1; k++){
+                    espacioHTML += "&nbsp&nbsp";
+                }
+    
+               
+                for(j = 1; j<=2 * i + 1; j++){
+                    asterisco += "*";
+                }
+    
+                caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+    
+            }
+    
+            // DECRECIENTE
+            for(i=limit-2;  i>=0; i--) {
+                let asterisco = "";
+                let espacioHTML = "";
+    
+                for (let k = 0; k < limit-i-1; k++) {
+                    espacioHTML += "&nbsp&nbsp";                
+                }
+    
+                for(j = 1; j<=2 * i + 1; j++){
+                    asterisco += "*";
+                }
+               
+                caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+            }
+        </script>
+    </div>
+</body>
+</html>

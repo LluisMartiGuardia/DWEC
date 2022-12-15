@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Dosis:wght@500&family=Open+Sans&family=Poppins&family=Raleway:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa';
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color:rgb(248, 248, 248);
+    padding: 20px;
+    vertical-align: middle;
+    align-items: center;
+    border-bottom: solid;
+    border-color: rgb(131, 131, 131);
+    border-bottom-width: 1px;
+}
+
+header img{
+    height: 100px;
+    width: 100px;
+}
+.logoinom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div ul{
+    word-spacing: 50px;
+}
+header div ul li{
+    display: inline;
+    list-style: none;
+}
+header div ul a{
+    text-decoration: none;
+    color: black;
+    transition: ease-in-out .2s;
+}
+.carroussel img{
+    height: 800px;
+    border-radius: 10px;
+}
+.carroussel{
+    padding: 50px 200px 50px 200px;
+}
+.history{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+    background-color: rgb(248, 245, 245);
+    align-items: center;
+}
+.history p{
+    padding-left: 5%;
+    text-align: justify;
+}
+.history img{
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(131, 131, 131);
+}
+footer{
+    text-align: center;
+    padding: 50px;
+    vertical-align: middle;
+    background-color: rgb(248, 245, 245);
+    border-top: solid;
+    border-color: rgb(131, 131, 131);
+    border-top-width: 1px;
+}
+.travesses{
+    display: flex;
+    justify-content: space-between;
+}
+.jornada{
+    display: flex;
+    justify-content: space-between;
+    width: 1600px;
+    flex-wrap: wrap;
+    padding: 5%;
+    border-radius: 10px;
+}
+.travesses aside{
+    background-color: rgb(231, 231, 231);
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+.travesses aside p{
+    background-color: white;
+    box-shadow: 0 2px 10px rgb(131, 131, 131);
+    border-radius: 5px;
+}
+.jornada img{
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(131, 131, 131);
+    height: 500px;
+}
+.jornades{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+}
+@media screen and (max-width: 1000px) {
+    .history{
+        flex-wrap: wrap;
+    }
+    .history img{
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .carroussel img{
+        height: auto;
+    }
+    .carroussel{
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    body form{
+        margin: 0px;
+        padding-left: 10px;
+        width: 400px;
+        padding-right: 40px;
+    }
+    body .form{
+        margin-left: 0;
+        margin-top: 100px;
+        margin-bottom: 200px;
+    }
+    .travesses{
+        margin-top: 10px;
+        display: inline;
+    }
+    .travesses aside{
+        background-color: rgb(231, 231, 231);
+        width: auto;
+        border: solid;
+        border-color: aliceblue;
+        border-right: none;
+        text-align: center;
+        padding: 30px;
+    }
+    .jornada{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(248, 245, 245);
+        width: 1600px;
+        flex-wrap: wrap;
+        padding: 5%;
+    }
+    .jornada img{
+        display: none;
+    }
+    .jornades img{
+        height: 300px;
+        transform: rotate(90deg);
+    }
+    .jornades{
+        margin-bottom: 0;
+    }
+}

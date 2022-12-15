@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITAT 1</title>
+</head>
+<body>
+    
+    <script>
+
+        //DECLAREM UNES QUANTES VARIABLES QUE SERAN NECESSARIES
+        let multilpeDe7 = 7;
+
+        var resposta = prompt("Escriu un numero: ");;
+
+        let resultat;
+
+        const multiples = [];
+
+        //HE FET UN BUCLE PER CALCULAR ELS MULTIPLES DE 7 FINS A 100 I DESPRÉS LES HE POSAT DINS UN ARRAY
+        for(var i=1;i<=100;i++){
+
+            resultat = multilpeDe7 * i;
+
+            multiples.push(resultat);
+
+        }
+
+        //document.write(multiples);
+
+        //HE DECLARAT UNES QUANTES VARIABLES MÉS
+        var resta;
+
+        var resultatFinal;
+
+        var numero;
+        //HE FET UN BUCLE PERQUE ME FAGI LA RESTA DE 7 PER EL MULTIPLE MÉS PETIT, I MAJOR QUE 0
+        for(var i=0;i<=multiples.length;i++){
+            resta = multiples[i]-resposta;
+        
+            if(resta > 0 ){
+                numero = resta;
+                break;
+            }
+
+
+            console.log(numero);
+
+        }        
+
+        //CONVERTEIXO ELS NUMEROS A INTEGERS I DESPRÉS ELS HE SUMAT
+        var numeroAInteger1= parseInt(numero);
+        var numeroAInteger2 = parseInt(resposta);
+        
+        resultatFinal = numeroAInteger1+numeroAInteger2;
+
+        //HO MOSTREM AL DOCUMENT
+        document.write("Has escrit "+resposta+". Et falten "+numero+" nombres per arribar a ser multiple de 7");
+        console.log(resultatFinal);
+
+        //var resposta = prompt("Escriu un numero: ");
+
+    </script>
+
+</body>
+</html>
