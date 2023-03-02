@@ -1,0 +1,9 @@
+npx create-react-app nombre-proyecto
+
+cd nombre-proyecto
+
+npm start
+
+npm run start
+
+npm install 

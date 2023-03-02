@@ -1,0 +1,17 @@
+{
+    "persona":
+    [
+        {
+            "nom": "Pepe",
+            "ciutat": "Mao"
+        },
+        {
+            "nom": "Joan",
+            "ciutat": "Es castell"
+        },
+        {
+            "nom": "Pere",
+            "ciutat": "Ciutadella"
+        }
+    ]
+}

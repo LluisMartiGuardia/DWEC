@@ -4,22 +4,23 @@
     padding: 0;
     font-family: 'Comfortaa';
 }
+
 a{
     text-decoration: none !important;
     color: black !important;
 }
+
 header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color:rgb(248, 248, 248);
-    padding: 20px;
+    background-color:#1B262C;
+    padding: 10px;
     vertical-align: middle;
     align-items: center;
-    border-bottom: solid;
-    border-color: rgb(131, 131, 131);
-    border-bottom-width: 1px;
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    z-index: 100;
 }
 
 header img{
@@ -27,6 +28,7 @@ header img{
     width: 100px;
 }
 .logoinom{
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +37,7 @@ header div ul{
     word-spacing: 50px;
 }
 header div ul li{
+    color: white;
     display: inline;
     list-style: none;
 }
@@ -67,37 +70,49 @@ header div ul a{
 }
 footer{
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     vertical-align: middle;
-    background-color: rgb(248, 245, 245);
-    border-top: solid;
-    border-color: rgb(131, 131, 131);
-    border-top-width: 1px;
+    background-color: #1B262C;
+    color: white;
 }
 .travesses{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .jornada{
+    color: #1B262C;
     display: flex;
     justify-content: space-between;
     width: 1600px;
     flex-wrap: wrap;
     padding: 5%;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 .travesses aside{
-    background-color: rgb(231, 231, 231);
-    width: 300px;
+    background-color: #1b262cf5;
+    width: 301px;
     text-align: center;
     padding: 30px;
-    border-radius: 10px;
+    height: 100vh;
+    margin: 0;
 }
-.travesses aside p{
-    background-color: white;
-    box-shadow: 0 2px 10px rgb(131, 131, 131);
+.travesses aside button{
+    margin-bottom: 3em;
+    border: none;
+    height: 3em;
+    width: 100%;
+    background-color: #1B262C;
+    box-shadow: 0 2px 10px #1B262C;
+    color: white;
     border-radius: 5px;
+    transition: ease-in-out .2s;
 }
+
+.travesses aside button:hover{
+    box-shadow: none;
+    transition: ease-in-out .2s;
+}
+
 .jornada img{
     border-radius: 10px;
     box-shadow: 0 2px 10px rgb(131, 131, 131);
@@ -110,6 +125,66 @@ footer{
     flex-wrap: wrap;
     margin-bottom: 3%;
 }
+
+.amagat{
+    display: none;
+}
+
+.generarTravesses{
+    display: flex;
+    justify-content: center;
+    margin: 10em;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+table tr th{
+    /* border: solid 1px #1B262C; */
+    padding: 2em;
+}
+table tr{
+    border-bottom: solid #1B262C 1px;
+}
+.headingTable, .idTable{
+    background-color: #1b262cf5;
+    color: white;
+}
+.inputs{
+    margin: 0 1em 0 1em;
+}
+.generarTravesses .confirmarQuiniela{
+    background-color: #1B262C;
+    color: white;
+    width: 80%;
+    /* padding: 10px; */
+    margin: 10px;
+    height: 3em;
+    border-radius: 10px;
+}
+
+.resultatCorrecte{
+    border: solid #36e67a 5px;
+    border-radius: 5px ;
+}
+
+.encerts{
+    margin: 3em;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
+
+.selects{
+    width: 200px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #1B262C 1px;
+}
+.selects option{
+ text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     .history{
         flex-wrap: wrap;
@@ -142,11 +217,7 @@ footer{
         display: inline;
     }
     .travesses aside{
-        background-color: rgb(231, 231, 231);
         width: auto;
-        border: solid;
-        border-color: aliceblue;
-        border-right: none;
         text-align: center;
         padding: 30px;
     }
@@ -154,7 +225,6 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgb(248, 245, 245);
         width: 1600px;
         flex-wrap: wrap;
         padding: 5%;
